@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		D45C95242563162C00B7FE3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45C95232563162C00B7FE3C /* AppDelegate.swift */; };
 		D45C95262563162C00B7FE3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45C95252563162C00B7FE3C /* SceneDelegate.swift */; };
-		D45C95282563162C00B7FE3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45C95272563162C00B7FE3C /* ViewController.swift */; };
 		D45C952B2563162C00B7FE3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45C95292563162C00B7FE3C /* Main.storyboard */; };
 		D45C952D2563163000B7FE3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D45C952C2563163000B7FE3C /* Assets.xcassets */; };
 		D45C95302563163000B7FE3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45C952E2563163000B7FE3C /* LaunchScreen.storyboard */; };
 		D45C953B2563163000B7FE3C /* AzimuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45C953A2563163000B7FE3C /* AzimuthTests.swift */; };
 		D45C95462563163000B7FE3C /* AzimuthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45C95452563163000B7FE3C /* AzimuthUITests.swift */; };
+		D4F1E75025633A4F00B078CB /* collectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F1E74F25633A4F00B078CB /* collectionVC.swift */; };
+		D4F1E75225633FF800B078CB /* AstroAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F1E75125633FF800B078CB /* AstroAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,6 @@
 		D45C95202563162C00B7FE3C /* Azimuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Azimuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45C95232563162C00B7FE3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D45C95252563162C00B7FE3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D45C95272563162C00B7FE3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D45C952A2563162C00B7FE3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D45C952C2563163000B7FE3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D45C952F2563163000B7FE3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		D45C95412563163000B7FE3C /* AzimuthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AzimuthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45C95452563163000B7FE3C /* AzimuthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzimuthUITests.swift; sourceTree = "<group>"; };
 		D45C95472563163000B7FE3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4F1E74F25633A4F00B078CB /* collectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionVC.swift; sourceTree = "<group>"; };
+		D4F1E75125633FF800B078CB /* AstroAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				D45C95232563162C00B7FE3C /* AppDelegate.swift */,
+				D4F1E75125633FF800B078CB /* AstroAPI.swift */,
+				D4F1E74F25633A4F00B078CB /* collectionVC.swift */,
 				D45C95252563162C00B7FE3C /* SceneDelegate.swift */,
-				D45C95272563162C00B7FE3C /* ViewController.swift */,
 				D45C95292563162C00B7FE3C /* Main.storyboard */,
 				D45C952C2563163000B7FE3C /* Assets.xcassets */,
 				D45C952E2563163000B7FE3C /* LaunchScreen.storyboard */,
@@ -259,8 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D45C95282563162C00B7FE3C /* ViewController.swift in Sources */,
+				D4F1E75225633FF800B078CB /* AstroAPI.swift in Sources */,
 				D45C95242563162C00B7FE3C /* AppDelegate.swift in Sources */,
+				D4F1E75025633A4F00B078CB /* collectionVC.swift in Sources */,
 				D45C95262563162C00B7FE3C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
