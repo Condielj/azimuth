@@ -13,6 +13,11 @@ import UIKit
 
 class collectionVC: UIViewController {
 
+    var store: DayStore!
     
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        store.fetchDayInformation()
+    }
 }

@@ -16,6 +16,8 @@
 		D45C95462563163000B7FE3C /* AzimuthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45C95452563163000B7FE3C /* AzimuthUITests.swift */; };
 		D4F1E75025633A4F00B078CB /* collectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F1E74F25633A4F00B078CB /* collectionVC.swift */; };
 		D4F1E75225633FF800B078CB /* AstroAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F1E75125633FF800B078CB /* AstroAPI.swift */; };
+		D4FC43C82565D10E00783899 /* DayStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FC43C72565D10E00783899 /* DayStore.swift */; };
+		D4FC43CA2565DD5400783899 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FC43C92565DD5400783899 /* Day.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		D45C95472563163000B7FE3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4F1E74F25633A4F00B078CB /* collectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionVC.swift; sourceTree = "<group>"; };
 		D4F1E75125633FF800B078CB /* AstroAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroAPI.swift; sourceTree = "<group>"; };
+		D4FC43C72565D10E00783899 /* DayStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayStore.swift; sourceTree = "<group>"; };
+		D4FC43C92565DD5400783899 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 				D4F1E75125633FF800B078CB /* AstroAPI.swift */,
 				D4F1E74F25633A4F00B078CB /* collectionVC.swift */,
 				D45C95252563162C00B7FE3C /* SceneDelegate.swift */,
+				D4FC43C72565D10E00783899 /* DayStore.swift */,
+				D4FC43C92565DD5400783899 /* Day.swift */,
 				D45C95292563162C00B7FE3C /* Main.storyboard */,
 				D45C952C2563163000B7FE3C /* Assets.xcassets */,
 				D45C952E2563163000B7FE3C /* LaunchScreen.storyboard */,
@@ -264,7 +270,9 @@
 			files = (
 				D4F1E75225633FF800B078CB /* AstroAPI.swift in Sources */,
 				D45C95242563162C00B7FE3C /* AppDelegate.swift in Sources */,
+				D4FC43CA2565DD5400783899 /* Day.swift in Sources */,
 				D4F1E75025633A4F00B078CB /* collectionVC.swift in Sources */,
+				D4FC43C82565D10E00783899 /* DayStore.swift in Sources */,
 				D45C95262563162C00B7FE3C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
