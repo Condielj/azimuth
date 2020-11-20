@@ -62,6 +62,7 @@ class collectionVC: UIViewController, UICollectionViewDelegate {
         
         if let cell = self.collectionView.cellForItem(at: indexPath) as? dayCollectionViewCell{
         cell.update(dayLabel: dateLabelSlice)
+        cell.setDay(passedDay: day)
         }
     }
 }

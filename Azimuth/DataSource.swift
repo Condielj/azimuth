@@ -16,14 +16,16 @@ class DataSource: NSObject, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let identifier = "dayCollectionViewCell"
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! dayCollectionViewCell
-        
+        cell.setDay(passedDay: days[self.numberMade])
+        //cell.setDay(passedDay: )
         //var dateLabelString = days
-        //cell.update(dayLabel: "...")
-        
+        cell.update(dayLabel: "...")
+        self.numberMade += 1
         return cell
     }
     
 
     var days = [Day]()
+    var numberMade = 0
 
 }

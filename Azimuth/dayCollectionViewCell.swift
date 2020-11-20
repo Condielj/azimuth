@@ -10,13 +10,23 @@ import UIKit
 
 class dayCollectionViewCell: UICollectionViewCell {
     @IBOutlet var contentLabel: UILabel!
+    //var day = Day(date: "ysnst", sunrise: "ysnst", sunset: "ysnst", solarNoon: "ysnst", dayLength: "ysnst", sunAzimuth: 0.0, moonrise: "ysnst", moonset: "ysnst", moonAzimuth: 0.0)
+    var day: Day?
+    func setDay(passedDay: Day){
+        self.day = passedDay
+    }
     
+    func printDay(){
+        //print(self.day)
+        print(self.day!.date)
+    }
     
     func update(dayLabel: String?) {
-        if let labelToDisplay = dayLabel{
-            contentLabel.text = labelToDisplay
-        } else {
-            contentLabel.text = "..."
-        }
+        //if let labelToDisplay = dayLabel{
+        //    contentLabel.text = labelToDisplay
+        //} else {
+        //    contentLabel.text = "..."
+        //}
+        contentLabel.text = day!.date
     }
 }
