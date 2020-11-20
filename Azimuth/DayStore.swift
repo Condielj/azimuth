@@ -39,7 +39,7 @@ class DayStore {
     
     func fetchDayInformation(){
         
-        var nov_days: [Day]
+        var nov_days: [Day] = []
         //for the purposes of the assignment, for now it will be made only for november
         let baseDate = "2020-11-"
         for i in 1...nov {
@@ -47,8 +47,8 @@ class DayStore {
             if i < 9 {
                 specificDate = specificDate + "0"
             }
-            specificDate = specificDate + String(i+1)
-            print(specificDate)
+            specificDate = specificDate + String(i)
+            //print(specificDate)
             let url = AstroAPI.passInURLParameter(specificDate: specificDate)
             let request = URLRequest(url: url)
             let task = session.dataTask(with: request) {
@@ -56,6 +56,7 @@ class DayStore {
                 
                 if let jsonData = data {
                     if let jsonString = String(data: jsonData, encoding: .utf8){
+                        //I HAVE EXCEEDED 1000 per DAY! 11/19/20
                         print(jsonString)
                         let dict = self.convertToDictionary(text: jsonString)
                         let mDate = dict!["date"]
@@ -70,7 +71,9 @@ class DayStore {
                         
                         let new_day = Day(date: mDate as! String, sunrise: mSunrise as! String, sunset: mSunset as! String, solarNoon: mSolarNoon as! String, dayLength: mDayLength as! String, sunAzimuth: mSunAzimuth , moonrise: mMoonrise as! String, moonset: mMoonset as! String, moonAzimuth: mMoonAzimuth )
                         
-                        self.nov_days.append(new_day)
+                        nov_days.append(new_day)
+                        //print(nov_days)
+                        self.nov_days = nov_days
                     }
                     
                 } else if let requestError = error {
@@ -84,10 +87,19 @@ class DayStore {
             }
             task.resume()
         }
-        for i in self.nov_days{
-            print(i)
-        }
-        print(self.nov_days)
+        //for i in self.nov_days{
+            //print(i)
+        //}
+        //print("PRINTING CLASS MEMBER VARIABLE NOW!!!!")
+        //print(self.nov_days)
+    }
+    
+    func getNovDays() -> [Day] {
+        //print(self.nov_days)
+        //for i in self.nov_days{
+        //    print(i)
+        //}
+        return self.nov_days
     }
     
     func convertToDictionary(text: String) -> [String: Any]? {
