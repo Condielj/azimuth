@@ -18,9 +18,13 @@ class Day: Codable {
     let dayLength: String
     let sunAzimuth: Float
     
+    
+    
     let moonrise: String
     let moonset: String
     let moonAzimuth: Float
+    
+    let dayIndex: Int
     
     init(date: String, sunrise: String, sunset: String, solarNoon: String, dayLength: String, sunAzimuth: Float, moonrise: String, moonset: String, moonAzimuth: Float) {
         
@@ -34,6 +38,11 @@ class Day: Codable {
         self.moonset = moonset
         self.moonAzimuth = moonAzimuth
         
+        let dateLabelString = self.date
+        let intForIndex = 8
+        let index = dateLabelString.index(dateLabelString.startIndex, offsetBy: intForIndex)
+        self.dayIndex = Int(String(dateLabelString[index...]))!
+        
     }
     
     
@@ -42,6 +51,7 @@ class Day: Codable {
     enum CodingKeys: String, CodingKey {
         
         case date
+        case dayIndex
         
         case sunrise
         case sunset
@@ -53,5 +63,11 @@ class Day: Codable {
         case moonset
         case moonAzimuth = "moon_azimuth"
         
+    }
+}
+
+extension Day: Equatable {
+    static func == (lhs: Day, rhs: Day) -> Bool {
+        return lhs.date == rhs.date
     }
 }

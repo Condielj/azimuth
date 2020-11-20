@@ -42,13 +42,13 @@ class DayStore {
         var nov_days: [Day] = []
         //for the purposes of the assignment, for now it will be made only for november
         let baseDate = "2020-11-"
-        for i in 1...nov {
+        for i in 0...nov-1 {
             var specificDate = baseDate
             if i < 9 {
                 specificDate = specificDate + "0"
             }
-            specificDate = specificDate + String(i)
-            //print(specificDate)
+            specificDate = specificDate + String(i+1)
+            print(specificDate)
             let url = AstroAPI.passInURLParameter(specificDate: specificDate)
             let request = URLRequest(url: url)
             let task = session.dataTask(with: request) {
