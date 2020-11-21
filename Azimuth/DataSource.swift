@@ -16,16 +16,29 @@ class DataSource: NSObject, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let identifier = "dayCollectionViewCell"
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! dayCollectionViewCell
-        cell.setDay(passedDay: days[self.numberMade])
-        //cell.setDay(passedDay: )
+        //print("Begin Debug")
+        
+        //VVV going to try to move all of this into collectionVC.swift VVV
+        //if numberMade <= 29{
+        //cell.setDay(passedDay: days[self.numberMade])
+        //}
         //var dateLabelString = days
-        cell.update(dayLabel: "...")
-        self.numberMade += 1
+        //if numberMade <= 29{
+        //    cell.update(dayLabel: "...")
+        //    self.cellList.append(cell)
+        //    print(cellList.count)
+        //    for i in cellList{
+        //        print(i.day?.date)
+        //    }
+        //}
+        //self.numberMade += 1
+        //^^^ going to try to move all of this into collectionVC.swift ^^^
         return cell
     }
     
 
     var days = [Day]()
     var numberMade = 0
+    var cellList: [dayCollectionViewCell] = []
 
 }

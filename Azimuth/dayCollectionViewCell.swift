@@ -27,6 +27,10 @@ class dayCollectionViewCell: UICollectionViewCell {
         //} else {
         //    contentLabel.text = "..."
         //}
-        contentLabel.text = day!.date
+        let intForIndex = 8
+        let dateLabelString = day!.date
+        let index = dateLabelString.index(dateLabelString.startIndex, offsetBy: intForIndex)
+        let dateLabelSlice = String(dateLabelString[index...])
+        contentLabel.text = dateLabelSlice
     }
 }

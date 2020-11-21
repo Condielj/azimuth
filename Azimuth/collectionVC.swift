@@ -17,6 +17,9 @@ class collectionVC: UIViewController, UICollectionViewDelegate {
     @IBOutlet var collectionView: UICollectionView!
     var store: DayStore!
     let dataSource = DataSource()
+    var dayss: [Day] = []
+    var numberMade = 0
+    var cellList: [dayCollectionViewCell] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +41,7 @@ class collectionVC: UIViewController, UICollectionViewDelegate {
             print(i.date)
         }
         self.dataSource.days = days
+        self.dayss = days
         //print(days[0].date)
         //print(days[1].date)
         //print(days[15].date)
@@ -46,6 +50,8 @@ class collectionVC: UIViewController, UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        let identifier = "dayCollectionViewCell"
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! dayCollectionViewCell
         let day = dataSource.days[indexPath.row]
         let dateLabelString = day.date
         let intForIndex = 8
@@ -56,7 +62,21 @@ class collectionVC: UIViewController, UICollectionViewDelegate {
         
         let indexPath = IndexPath(item: dayIndex, section: 0)
         
-        
+        if numberMade <= 29{
+        cell.setDay(passedDay: dayss[self.numberMade])
+        }
+        //cell.setDay(passedDay: )
+        //var dateLabelString = days
+        if numberMade <= 29{
+            cell.update(dayLabel: "...")
+            self.cellList.append(cell)
+            print(cellList.count)
+            for i in cellList{
+                print(i.day?.date)
+                cell.update(dayLabel: "...")
+            }
+        }
+        self.numberMade += 1
         
         //let indexPath = IndexPath(item: dayIndex, section: 0)
         
