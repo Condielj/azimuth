@@ -21,10 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         
         let CVC = window!.rootViewController as! collectionVC
-        //let DVC = CVC.topViewController
-        //let CVC = rootViewController.topViewController as! collectionVC
         CVC.store = DayStore()
-        //CVC.detailView = DVC
         
     }
 

@@ -82,8 +82,6 @@ class DayStore {
                     print("Unexpected error with the request.")
                 }
                 
-                //let result = self.processDayRequest(data: data, error: error)
-                //completion(result)
             }
             task.resume()
         }
@@ -95,10 +93,7 @@ class DayStore {
     }
     
     func getNovDays() -> [Day] {
-        //print(self.nov_days)
-        //for i in self.nov_days{
-        //    print(i)
-        //}
+        
         return self.nov_days
     }
     

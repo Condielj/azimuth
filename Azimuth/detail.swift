@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class detail: UIViewController{
     
@@ -38,26 +39,15 @@ class detail: UIViewController{
         self.sunsetOutlet.text = sunset
         self.solarnoonOutlet.text = solarnoon
         self.daylengthOutlet.text = daylength
-        self.sunazimuthOutlet.text = String(sunazimuth)
+        self.sunazimuthOutlet.text = String(round(sunazimuth))+"°"
         self.moonriseOutlet.text = moonrise
         self.moonsetOutlet.text = moonset
-        self.moonazimuthOutlet.text = String(moonazimuth)
+        self.moonazimuthOutlet.text = String(round(moonazimuth))+"°"
 
     }
     
-//    func detailUpdate(psunrise: String, psunset: String, psolarnoon: String, pdaylength: String, psunazimuth: Float, pmoonrise: String, pmoonset: String, pmoonazimuth: Float){
-//        sunriseOutlet.text = psunrise
-//        sunsetOutlet.text = psunset
-//        solarnoonOutlet.text = psolarnoon
-//        daylengthOutlet.text = pdaylength
-//        sunazimuthOutlet.text = String(psunazimuth)
-//        moonriseOutlet.text = pmoonrise
-//        moonsetOutlet.text = pmoonset
-//        moonazimuthOutlet.text = String(pmoonazimuth)
-//
-//
-//    }
-    
+
+
     
     
     enum CodingKeys: String, CodingKey {

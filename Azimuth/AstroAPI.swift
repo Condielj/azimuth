@@ -6,11 +6,15 @@
 //  Copyright © 2020 Lawrence J. Condie. All rights reserved.
 //
 
+
+//two api keys if you run out of requests
+//9689243c44e741a1ab63d98eba4e8912
+//cf80dc7b359c4c9faf66e3cf1385f100
 import Foundation
 
 struct AstroAPI {
     private static let baseURLString = "https://api.ipgeolocation.io/astronomy"
-    private static let apiKey = "cf80dc7b359c4c9faf66e3cf1385f100"
+    private static let apiKey = "9689243c44e741a1ab63d98eba4e8912"
     
     private static func AstroURL(parameters: [String:String]?) -> URL{
         var components = URLComponents(string: baseURLString)!
